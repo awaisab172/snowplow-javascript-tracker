@@ -7,7 +7,8 @@
     "jstimezonedetect": "1.0.5",
     "murmurhash": "0.0.2",
     "sha1": "git://github.com/pvorb/node-sha1.git#910081c83f3661507d9d89e66e3f38d8b59d5559",
-    "uuid": "2.0.3"
+    "uuid": "2.0.3",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -45,5 +46,10 @@
     "open source"
   ],
   "license": "Simplified BSD",
-  "private": true
+  "private": true,
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
